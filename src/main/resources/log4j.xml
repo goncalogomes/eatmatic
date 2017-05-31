@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="false"
+                     xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <appender code="file" class="org.apache.log4j.RollingFileAppender">
+        <param code="append" value="true" />
+        <param code="maxFileSize" value="5000KB" />
+        <param code="maxBackupIndex" value="5" />
+        <!-- For Tomcat -->
+        <param code="file" value="eatmatic.log" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param code="ConversionPattern"
+                   value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+        </layout>
+    </appender>
+
+    <appender code="console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param code="ConversionPattern"
+                   value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+        </layout>
+    </appender>
+
+    <logger code="com.webspertise">
+        <level value="DEBUG"/>
+        <appender-ref ref="file" />
+    </logger>
+
+
+    <root>
+        <level value="INFO" />
+        <appender-ref ref="file" />
+    </root>
+
+</log4j:configuration>
