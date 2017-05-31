@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -moz-box-sizing: border-box;
+    /* box-sizing: border-box; */
+    text-transform: uppercase;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    padding:0;
+    float:none;
+    clear:both;
+}
+.button {
+    background-color: #007cb6; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+body {
+    font: normal 22px/22px 'Neucha', sans-serif;
+    padding:0;
+    display:inline-block;
+    float:none;
+    clear:both;
+}
+.ui-content {
+    padding-bottom: 3px !important;
+    max-height: 100% !important;
+    display:inline-block;
+    width:100%;
+    float:none;
+    clear:both;
+}
